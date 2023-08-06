@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -g CMakeFiles/demo.dir/main.cpp.o -o demo   -L/home/ts/software/systemc-2.3.3/lib-linux64  -Wl,-rpath,/home/ts/software/systemc-2.3.3/lib-linux64 -lsystemc 

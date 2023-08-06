@@ -1,0 +1,3 @@
+/home/ts/bupt/SystemC/build/CMakeFiles/demo.dir
+/home/ts/bupt/SystemC/build/CMakeFiles/edit_cache.dir
+/home/ts/bupt/SystemC/build/CMakeFiles/rebuild_cache.dir
