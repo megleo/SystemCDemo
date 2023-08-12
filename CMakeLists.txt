@@ -10,6 +10,9 @@ set(SystemC_INCLUDE_DIRS "${SYSTEMC_HOME}/include")
 set(SystemC_LIBRARY_DIRS "${SYSTEMC_HOME}/lib-linux64")
 set(SystemC_LIBRARIES "-lsystemc")
 
+message(STATUS "${CMAKE_CURRENT_SOURCE_DIR}/include")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 # # 添加可执行文件
 # add_executable(demo main.cpp)
 
@@ -20,6 +23,6 @@ set(SystemC_LIBRARIES "-lsystemc")
 # target_link_libraries(demo PRIVATE ${SystemC_LIBRARIES})
 
 add_executable(fir src/main.cpp src/tb.cpp src/fir.cpp)
-target_include_directories(fir PRIVATE ${SystemC_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(fir PRIVATE ${SystemC_INCLUDE_DIRS})
 target_link_directories(fir PRIVATE ${SystemC_LIBRARY_DIRS})
 target_link_libraries(fir PRIVATE ${SystemC_LIBRARIES})
