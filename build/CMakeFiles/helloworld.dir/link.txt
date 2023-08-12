@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -g CMakeFiles/helloworld.dir/main.cpp.o -o helloworld   -L/home/ts/software/systemc-2.3.3/lib-linux64  -Wl,-rpath,/home/ts/software/systemc-2.3.3/lib-linux64 -lsystemc 

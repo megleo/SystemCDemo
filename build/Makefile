@@ -117,41 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named demo
+# Target rules for targets named fir
 
 # Build rule for target.
-demo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo
-.PHONY : demo
+fir: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fir
+.PHONY : fir
 
 # fast build rule for target.
-demo/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
-.PHONY : demo/fast
+fir/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/build
+.PHONY : fir/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/fir.o: src/fir.cpp.o
+.PHONY : src/fir.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/fir.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/fir.cpp.o
+.PHONY : src/fir.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/fir.i: src/fir.cpp.i
+.PHONY : src/fir.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/fir.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/fir.cpp.i
+.PHONY : src/fir.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/fir.s: src/fir.cpp.s
+.PHONY : src/fir.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/fir.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/fir.cpp.s
+.PHONY : src/fir.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/tb.o: src/tb.cpp.o
+.PHONY : src/tb.o
+
+# target to build an object file
+src/tb.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/tb.cpp.o
+.PHONY : src/tb.cpp.o
+
+src/tb.i: src/tb.cpp.i
+.PHONY : src/tb.i
+
+# target to preprocess a source file
+src/tb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/tb.cpp.i
+.PHONY : src/tb.cpp.i
+
+src/tb.s: src/tb.cpp.s
+.PHONY : src/tb.s
+
+# target to generate assembly for a file
+src/tb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/src/tb.cpp.s
+.PHONY : src/tb.cpp.s
 
 # Help Target
 help:
@@ -161,10 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... demo"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... fir"
+	@echo "... src/fir.o"
+	@echo "... src/fir.i"
+	@echo "... src/fir.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/tb.o"
+	@echo "... src/tb.i"
+	@echo "... src/tb.s"
 .PHONY : help
 
 
