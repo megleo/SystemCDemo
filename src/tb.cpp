@@ -18,7 +18,7 @@ void tb::source() {
         }else{
             tmp = 0;
         }
-        
+
         inp_val.write(1);
         inp.write(tmp);
         start_time[i] = sc_time_stamp();

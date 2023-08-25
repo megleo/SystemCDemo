@@ -16,7 +16,9 @@ SC_MODULE(fir) {
     // Coefficients for each FIR
 
     SC_CTOR(fir) {
+        // 两个参数,一个是线程的函数,一个是时钟的边沿(这里是上升沿) 这个process sensitivie to.
         SC_CTHREAD(fir_main, clk.pos() );
+        // 用于指定一个复位信号rst，并将其设置为真（true）。这表示在rst为真（高电平）时，线程会被复位。
         reset_signal_is(rst, true);
     }
 };

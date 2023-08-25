@@ -25,8 +25,6 @@ void fir::fir_main(void){
     while (true)
     {
         sc_int<16> in_val;
-        sc_int<16> out_val;
-
         inp_rdy.write(1);
         do
         {
@@ -42,7 +40,6 @@ void fir::fir_main(void){
         taps[0] = in_val;
 
         sc_int<16> val;
-
         for (size_t i = 0; i < 5; i++)
         {
             val += coef[i] * taps[i];
@@ -50,7 +47,7 @@ void fir::fir_main(void){
 
         outp_vld.write(1);
         outp.write(val);
-        
+
         do
         {
             wait();

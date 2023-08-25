@@ -129,6 +129,43 @@ fir/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/build
 .PHONY : fir/fast
 
+#=============================================================================
+# Target rules for targets named add
+
+# Build rule for target.
+add: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 add
+.PHONY : add
+
+# fast build rule for target.
+add/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/build
+.PHONY : add/fast
+
+src/addFunction.o: src/addFunction.cpp.o
+.PHONY : src/addFunction.o
+
+# target to build an object file
+src/addFunction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/addFunction.cpp.o
+.PHONY : src/addFunction.cpp.o
+
+src/addFunction.i: src/addFunction.cpp.i
+.PHONY : src/addFunction.i
+
+# target to preprocess a source file
+src/addFunction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/addFunction.cpp.i
+.PHONY : src/addFunction.cpp.i
+
+src/addFunction.s: src/addFunction.cpp.s
+.PHONY : src/addFunction.s
+
+# target to generate assembly for a file
+src/addFunction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/src/addFunction.cpp.s
+.PHONY : src/addFunction.cpp.s
+
 src/fir.o: src/fir.cpp.o
 .PHONY : src/fir.o
 
@@ -209,7 +246,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... add"
 	@echo "... fir"
+	@echo "... src/addFunction.o"
+	@echo "... src/addFunction.i"
+	@echo "... src/addFunction.s"
 	@echo "... src/fir.o"
 	@echo "... src/fir.i"
 	@echo "... src/fir.s"

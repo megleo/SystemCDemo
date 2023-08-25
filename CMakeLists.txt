@@ -26,3 +26,8 @@ add_executable(fir src/main.cpp src/tb.cpp src/fir.cpp)
 target_include_directories(fir PRIVATE ${SystemC_INCLUDE_DIRS})
 target_link_directories(fir PRIVATE ${SystemC_LIBRARY_DIRS})
 target_link_libraries(fir PRIVATE ${SystemC_LIBRARIES})
+
+add_executable(add src/addFunction.cpp)
+target_include_directories(add PRIVATE ${SystemC_INCLUDE_DIRS})
+target_link_directories(add PRIVATE ${SystemC_LIBRARY_DIRS})
+target_link_libraries(add PRIVATE ${SystemC_LIBRARIES})

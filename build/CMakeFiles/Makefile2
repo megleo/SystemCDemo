@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/ts/bupt/SystemC/build
 
 # The main recursive "all" target.
 all: CMakeFiles/fir.dir/all
+all: CMakeFiles/add.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/fir.dir/clean
+clean: CMakeFiles/add.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,7 +83,7 @@ clean: CMakeFiles/fir.dir/clean
 CMakeFiles/fir.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ts/bupt/SystemC/build/CMakeFiles --progress-num=1,2,3,4 "Built target fir"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ts/bupt/SystemC/build/CMakeFiles --progress-num=3,4,5,6 "Built target fir"
 .PHONY : CMakeFiles/fir.dir/all
 
 # Build rule for subdir invocation for target.
@@ -99,6 +101,32 @@ fir: CMakeFiles/fir.dir/rule
 CMakeFiles/fir.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fir.dir/build.make CMakeFiles/fir.dir/clean
 .PHONY : CMakeFiles/fir.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/add.dir
+
+# All Build rule for target.
+CMakeFiles/add.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ts/bupt/SystemC/build/CMakeFiles --progress-num=1,2 "Built target add"
+.PHONY : CMakeFiles/add.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/add.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ts/bupt/SystemC/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/add.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ts/bupt/SystemC/build/CMakeFiles 0
+.PHONY : CMakeFiles/add.dir/rule
+
+# Convenience name for target.
+add: CMakeFiles/add.dir/rule
+.PHONY : add
+
+# clean rule for target.
+CMakeFiles/add.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/add.dir/build.make CMakeFiles/add.dir/clean
+.PHONY : CMakeFiles/add.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

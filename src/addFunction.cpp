@@ -7,7 +7,9 @@ SC_MODULE(and2){
     // sc_in<bool> clk;
 
     void func() {
-        f.write(a.read() & b.read());
+        cout << "a = " << a <<endl;
+        cout << "b = " << b <<endl;
+        f.write(a.read() + b.read());
     }
 
     SC_CTOR(and2) {
@@ -21,18 +23,20 @@ SC_MODULE(and2){
 
 int sc_main(int argc, char* argv[]) {
     // 创建信号
-    sc_signal<sc_uint<1>> a;
-    sc_signal<sc_uint<1>> b;
-    sc_signal<sc_uint<1>> f;
+    sc_signal<sc_uint<2>> a;
+    sc_signal<sc_uint<2>> b;
+    sc_signal<sc_uint<2>> f;
 
     // 创建模块并连接信号
-    and2<sc_uint<1>> addG("andGate");
+    and2<sc_uint<2>> addG("andGate");
     addG.a(a);
     addG.b(b);
     addG.f(f);
 
-    a = 1;
-    b = 1;
+    a = *argv[1];
+    b = *argv[2];
+            cout << "a = " << a <<endl;
+        cout << "b = " << b <<endl;
     sc_start();
     cout << "f = " << f << endl;
     return 0;
